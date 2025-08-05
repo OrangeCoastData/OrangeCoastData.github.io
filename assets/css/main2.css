@@ -2,9 +2,8 @@
 body {
   margin: 0;
   font-family: 'Inter', sans-serif;
-  background: linear-gradient(180deg, #0F1A2A 0%, #1A2F47 100%);
-  color: #FFFFFF;
   scroll-behavior: smooth;
+  color: #FFFFFF;
 }
 
 header {
@@ -14,72 +13,95 @@ header {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 1em 2em;
+  padding: 1.5em 2.5em;
+  font-size: 1.1rem;
   z-index: 1000;
 }
 
-header .logo img {
-  height: 40px;
+.logo-text {
+  font-size: 1.6rem;
+  font-weight: 700;
+  color: #FFFFFF;
+}
+
+nav {
+  display: flex;
+  align-items: center;
+  gap: 2rem;
 }
 
 nav ul {
-  list-style: none;
   display: flex;
-  gap: 1em;
-  padding: 0;
+  list-style: none;
+  gap: 2rem;
   margin: 0;
+  padding: 0;
 }
 
 nav ul li a {
   color: #FFFFFF;
   text-decoration: none;
+  font-weight: 500;
   transition: color 0.3s ease;
 }
 
 nav ul li a:hover {
-  text-decoration: underline;
   color: #FFA500;
 }
 
-nav ul li a.button {
-  border: 1px solid #E08134;
-  padding: 0.5em 1em;
-  color: #E08134;
+.cta-button {
+  background-color: #FFA500;
+  color: #0F1A2A;
+  padding: 0.7em 1.5em;
   border-radius: 4px;
+  font-weight: bold;
+  text-decoration: none;
+  margin-left: auto;
+  transition: background 0.3s ease;
+}
+
+.cta-button:hover {
+  background-color: #cc7a00;
 }
 
 .hero-section {
-  padding: 150px 40px;
+  padding: 160px 40px 120px 40px;
   text-align: left;
   max-width: 960px;
   margin: 0 auto;
 }
 
 .hero-section h1 {
-  font-size: 3rem;
+  font-size: 3.2rem;
+  font-weight: 700;
   line-height: 1.2;
-  font-weight: 600;
+  color: white;
 }
 
 .hero-section .highlight {
   color: #FFA500;
 }
 
+.hero-section .white {
+  color: #FFFFFF;
+}
+
 .section-divider {
   border: none;
   border-top: 2px solid #2F3E55;
-  margin: 60px auto;
-  width: 90%;
+  margin: 0;
+  width: 100%;
 }
 
 section {
-  padding: 60px 20px;
+  padding: 80px 20px;
   max-width: 960px;
   margin: 0 auto;
 }
 
-h1, h2 {
+h2 {
   color: #FFA500;
+  margin-bottom: 1em;
 }
 
 ul {
@@ -90,11 +112,10 @@ ul {
   display: grid;
   gap: 20px;
   grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-  margin-top: 2em;
 }
 
 .card {
-  background-color: #121F35;
+  background-color: rgba(18, 31, 53, 0.95);
   padding: 20px;
   border-radius: 8px;
   box-shadow: 0 0 5px rgba(0,0,0,0.2);
@@ -105,17 +126,38 @@ ul {
   margin-top: 0;
 }
 
+/* Gradient backgrounds */
+.blue-bg {
+  background: linear-gradient(180deg, #0F1A2A 0%, #1A2F47 100%);
+}
+
+.cream-bg {
+  background: linear-gradient(180deg, #F0F0EB 0%, #E5E5DD 100%);
+  color: #1a1a1a;
+}
+
+.orange-bg {
+  background: linear-gradient(180deg, #FFF1E0 0%, #FFD5A5 100%);
+  color: #1a1a1a;
+}
+
+.contact-bg {
+  background: linear-gradient(180deg, #0F1A2A 0%, #1A2F47 100%);
+}
+
+/* Contact form */
 form {
   background-color: #121F35;
   padding: 30px;
   border-radius: 8px;
   box-shadow: 0 0 10px rgba(0,0,0,0.2);
+  margin-top: 2em;
 }
 
 form input, form textarea {
   width: 100%;
   margin: 10px 0;
-  padding: 10px;
+  padding: 12px;
   background-color: #1A2A45;
   color: #FFFFFF;
   border: 1px solid #2F3E55;
@@ -126,7 +168,7 @@ form input, form textarea {
 form button {
   background: linear-gradient(to right, #FFA500, #E08134);
   color: white;
-  padding: 10px 20px;
+  padding: 12px 24px;
   border: none;
   border-radius: 4px;
   cursor: pointer;
@@ -147,18 +189,24 @@ footer {
 @media (max-width: 768px) {
   header {
     flex-direction: column;
-    align-items: center;
-    padding: 1em;
+    align-items: flex-start;
+    gap: 1em;
+    padding: 1.2em;
+  }
+
+  nav {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 1rem;
   }
 
   nav ul {
     flex-direction: column;
-    align-items: center;
-    gap: 0.5em;
+    gap: 1rem;
   }
 
   .hero-section {
-    padding: 80px 20px;
+    padding: 100px 20px 80px 20px;
   }
 
   .hero-section h1 {
