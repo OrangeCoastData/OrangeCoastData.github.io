@@ -1,0 +1,171 @@
+
+body {
+  margin: 0;
+  font-family: 'Inter', sans-serif;
+  background: linear-gradient(180deg, #0F1A2A 0%, #1A2F47 100%);
+  color: #FFFFFF;
+  scroll-behavior: smooth;
+}
+
+header {
+  position: sticky;
+  top: 0;
+  background-color: #0F1A2A;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1em 2em;
+  z-index: 1000;
+}
+
+header .logo img {
+  height: 40px;
+}
+
+nav ul {
+  list-style: none;
+  display: flex;
+  gap: 1em;
+  padding: 0;
+  margin: 0;
+}
+
+nav ul li a {
+  color: #FFFFFF;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+nav ul li a:hover {
+  text-decoration: underline;
+  color: #FFA500;
+}
+
+nav ul li a.button {
+  border: 1px solid #E08134;
+  padding: 0.5em 1em;
+  color: #E08134;
+  border-radius: 4px;
+}
+
+.hero-section {
+  padding: 150px 40px;
+  text-align: left;
+  max-width: 960px;
+  margin: 0 auto;
+}
+
+.hero-section h1 {
+  font-size: 3rem;
+  line-height: 1.2;
+  font-weight: 600;
+}
+
+.hero-section .highlight {
+  color: #FFA500;
+}
+
+.section-divider {
+  border: none;
+  border-top: 2px solid #2F3E55;
+  margin: 60px auto;
+  width: 90%;
+}
+
+section {
+  padding: 60px 20px;
+  max-width: 960px;
+  margin: 0 auto;
+}
+
+h1, h2 {
+  color: #FFA500;
+}
+
+ul {
+  padding-left: 20px;
+}
+
+.expertise-grid {
+  display: grid;
+  gap: 20px;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  margin-top: 2em;
+}
+
+.card {
+  background-color: #121F35;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 0 5px rgba(0,0,0,0.2);
+}
+
+.card h3 {
+  color: #FFA500;
+  margin-top: 0;
+}
+
+form {
+  background-color: #121F35;
+  padding: 30px;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0,0,0,0.2);
+}
+
+form input, form textarea {
+  width: 100%;
+  margin: 10px 0;
+  padding: 10px;
+  background-color: #1A2A45;
+  color: #FFFFFF;
+  border: 1px solid #2F3E55;
+  border-radius: 4px;
+  font-family: 'Inter', sans-serif;
+}
+
+form button {
+  background: linear-gradient(to right, #FFA500, #E08134);
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-weight: bold;
+  transition: background 0.3s ease;
+}
+
+form button:hover {
+  background: #cc691f;
+}
+
+footer {
+  text-align: center;
+  padding: 20px;
+  color: #B0BACB;
+}
+
+@media (max-width: 768px) {
+  header {
+    flex-direction: column;
+    align-items: center;
+    padding: 1em;
+  }
+
+  nav ul {
+    flex-direction: column;
+    align-items: center;
+    gap: 0.5em;
+  }
+
+  .hero-section {
+    padding: 80px 20px;
+  }
+
+  .hero-section h1 {
+    font-size: 2rem;
+  }
+
+  form {
+    padding: 20px;
+  }
+}
